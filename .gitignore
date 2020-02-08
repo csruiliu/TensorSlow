@@ -1,0 +1,10 @@
+*.txt
+*.csv
+*.md
+*.png
+*.pdf
+*.jpg
+*.pyc
+
+**/__pycache__/
+**/logs/

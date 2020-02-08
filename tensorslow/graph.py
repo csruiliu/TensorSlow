@@ -21,6 +21,7 @@ class Operation:
     def compute(self):
         pass
 
+
 class placeholder:
     def __init__(self):
         self.consumers = []

@@ -14,7 +14,3 @@ y = matmul(A, x)
 z = add(y, b)
 
 print(z)
-
-#if __name__ == "__main__":
-#    pass
-            

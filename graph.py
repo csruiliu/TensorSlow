@@ -22,7 +22,7 @@ class Operation:
         pass
 
 
-class placeholder:
+class Placeholder:
     def __init__(self):
         self.consumers = []
         _default_graph.placeholders.append(self)

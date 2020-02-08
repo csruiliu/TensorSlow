@@ -1,14 +1,14 @@
 import numpy as np
-
+from graph import Placeholder, Variable, Operation
 
 class Session():
 
     def run(self, operation, feed_dict={}):
-        nodes_postorder = traverse_postorder(operation)
+        nodes_postorder = self.traverse_postorder(operation)
 
         # iterate node in postorder
         for node in nodes_postorder:
-            if type(node) == placeholder:
+            if type(node) == Placeholder:
                 node.output = feed_dict[node]
             elif type(node) == Variable:
                 node.output = node.value
@@ -21,9 +21,9 @@ class Session():
 
         return operation.output 
 
-    def traverse_postorder(operation):
+    def traverse_postorder(self, operation):
         nodes_postorder = []
-        
+
         def recurse(node):
             if isinstance(node, Operation):
                 for input_node in node.input_nodes:

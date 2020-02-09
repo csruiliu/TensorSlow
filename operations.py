@@ -55,7 +55,7 @@ class multiply(Operation):
 
 class reduce_sum(Operation):
     def __init__(self, A, axis=None):
-        super.__init__([A])
+        super().__init__([A])
         self.axis = axis
 
     def compute(self, A_value):

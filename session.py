@@ -1,6 +1,7 @@
 import numpy as np
 from graph import Placeholder, Variable, Operation
 
+
 class Session():
 
     def run(self, operation, feed_dict={}):
